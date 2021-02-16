@@ -7,19 +7,17 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('data', '0003_auto_20171019_0915'),
-    ]
+    dependencies = [("data", "0003_auto_20171019_0915")]
 
     operations = [
         migrations.AlterField(
-            model_name='images',
-            name='file_name',
+            model_name="images",
+            name="file_name",
             field=models.CharField(blank=True, max_length=255, null=True),
         ),
         migrations.AlterField(
-            model_name='images',
-            name='local_path',
+            model_name="images",
+            name="local_path",
             field=models.CharField(blank=True, max_length=255, null=True),
         ),
     ]

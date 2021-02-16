@@ -28,11 +28,10 @@ class Platfrom:
 
     def download_image(self, image_entity):
         """Saves the image locally"""
-        local_path = "{}/{}".format(settings.LOCAL_STORAGE_PATH,
-                                    "{}.jpg".format(image_entity.source_id))
-        urllib.request.\
-            urlretrieve(image_entity.image_url,
-                        local_path)
+        local_path = "{}/{}".format(
+            settings.LOCAL_STORAGE_PATH, "{}.jpg".format(image_entity.source_id)
+        )
+        urllib.request.urlretrieve(image_entity.image_url, local_path)
         image_entity.local_path = local_path
         return image_entity
 
@@ -43,9 +42,9 @@ class Platfrom:
         """
         # TODO: Set conditional checks for platfrom specific calls
         spi_setdeskwallpaper = 20
-        ctypes.windll.user32\
-            .SystemParametersInfoW(spi_setdeskwallpaper, 0,
-                                   os.path.abspath(image_entity.local_path), 3)
+        ctypes.windll.user32.SystemParametersInfoW(
+            spi_setdeskwallpaper, 0, os.path.abspath(image_entity.local_path), 3
+        )
 
     def defaut_set(self):
         """Runs default platfrom functions"""

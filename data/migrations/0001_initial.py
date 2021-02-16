@@ -9,17 +9,24 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Images',
+            name="Images",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('web_url', models.CharField(max_length=255)),
-                ('local_path', models.CharField(max_length=255)),
-                ('file_name', models.CharField(max_length=255)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("web_url", models.CharField(max_length=255)),
+                ("local_path", models.CharField(max_length=255)),
+                ("file_name", models.CharField(max_length=255)),
             ],
-        ),
+        )
     ]

@@ -7,24 +7,20 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('data', '0001_initial'),
-    ]
+    dependencies = [("data", "0001_initial")]
 
     operations = [
         migrations.AddField(
-            model_name='images',
-            name='has_been_set',
+            model_name="images",
+            name="has_been_set",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='images',
-            name='user_likes',
+            model_name="images",
+            name="user_likes",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='images',
-            name='web_likes',
-            field=models.IntegerField(default=0),
+            model_name="images", name="web_likes", field=models.IntegerField(default=0)
         ),
     ]

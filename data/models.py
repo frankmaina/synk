@@ -6,6 +6,7 @@ class Images(models.Model):
     Responsible for storing image metadata fetched from
     unsplash
     """
+
     web_url_full = models.CharField(max_length=255)
     web_url_raw = models.CharField(max_length=255)
     local_path = models.CharField(max_length=255, null=True, blank=True)

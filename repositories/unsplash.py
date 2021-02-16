@@ -22,7 +22,6 @@ def fetch_unsplash_images(page_number=1):
     images = UnsplashImageResource().fetch_images(page_number)
 
     for image in images:
-        return_list.\
-            append(UnsplashImageEntityMapper().from_images_source(image))
+        return_list.append(UnsplashImageEntityMapper().from_images_source(image))
 
     return return_list

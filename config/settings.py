@@ -4,9 +4,10 @@ Settings file for sinkie
 import os
 
 from dotenv import load_dotenv
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-load_dotenv(os.path.join(BASE_DIR, '.env'))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 
 REFRESH_RATE = 30
@@ -22,14 +23,12 @@ LOCAL_STORAGE_PATH = "file_storage"
 
 # SQLite
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'synk.sqlite3'),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "synk.sqlite3"),
     }
 }
 
-INSTALLED_APPS = (
-    'data',
-)
+INSTALLED_APPS = ("data",)
 
-SECRET_KEY = '1234567890qwertyuiopsdfghjkxcvbnm'
+SECRET_KEY = "1234567890qwertyuiopsdfghjkxcvbnm"

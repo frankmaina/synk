@@ -13,9 +13,18 @@ class ImageEntity:
         ImageEntity
     """
 
-    def __init__(self, source_id=None, image_url=None,
-                 image_height=None, image_width=None, description=None,
-                 likes=None, dislikes=None, source=None, local_path=None):
+    def __init__(
+        self,
+        source_id=None,
+        image_url=None,
+        image_height=None,
+        image_width=None,
+        description=None,
+        likes=None,
+        dislikes=None,
+        source=None,
+        local_path=None,
+    ):
 
         self.source_id = source_id
         self.image_url = image_url
